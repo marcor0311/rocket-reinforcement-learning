@@ -50,7 +50,7 @@ This is a manual demonstration, not a trained agent. One seed or a few trials ca
 ## Run the demo
 
 ```bash
-python compare_actions.py
+python explorations/01_actions/compare_actions.py
 ```
 
 The left lander does nothing. Control the right lander with the keys above. Press **R** to restart both with the same seed or **Q** to quit.

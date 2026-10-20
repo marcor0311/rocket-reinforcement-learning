@@ -9,14 +9,15 @@ This is a learning project about neural networks and reinforcement learning. We 
 3. Measure how often it lands safely across many different seeds.
 4. Later, explore continuous mode, where the agent controls engine strength.
 
-The first experiment compares doing nothing with manually controlled actions. It helps us see how actions affect the lander's movement, but it is not a trained agent. See [compare_actions.md](compare_actions.md).
+The first exploration compares doing nothing with manually controlled actions. It helps us see how actions affect the lander's movement, but it is not a trained agent. See [explorations/01_actions/compare_actions.md](explorations/01_actions/compare_actions.md).
 
 ## Reward idea
 
-The environment already provides a reward. Our early idea is to understand that reward first, then consider whether to adjust it to encourage a safe, upright, slower landing and discourage unnecessary engine use or long episodes. Any changes will be experiments to evaluate, not assumptions that the agent must follow.
+The environment already provides a reward. We will use it as our baseline and only consider changes if experiments reveal a specific problem. See [explorations/02_reward/reward_breakdown.md](explorations/02_reward/reward_breakdown.md) for a short explanation, and run [reward_simulation.py](explorations/02_reward/reward_simulation.py) to compare no-action, random, and manual control.
 
 ## Current status
 
 - Gymnasium's LunarLander-v3 is installed in the local `.venv/` environment.
-- The side-by-side manual comparison demo is in `compare_actions.py`.
+- Exploration 1: manual action comparison in `explorations/01_actions/`.
+- Exploration 2: default reward notes and live simulation in `explorations/02_reward/`.
 - No neural network or training algorithm has been added yet.
