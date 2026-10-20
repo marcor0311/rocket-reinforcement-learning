@@ -20,4 +20,5 @@ The environment already provides a reward. We will use it as our baseline and on
 - Gymnasium's LunarLander-v3 is installed in the local `.venv/` environment.
 - Exploration 1: manual action comparison in `explorations/01_actions/`.
 - Exploration 2: default reward notes and live simulation in `explorations/02_reward/`.
+- Exploration 3: a small deterministic Q-table example in `explorations/03_q_table/`.
 - No neural network or training algorithm has been added yet.
