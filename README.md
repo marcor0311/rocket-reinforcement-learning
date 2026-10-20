@@ -1,24 +1,27 @@
-# rocket-reinforcement-learning
+# LunarLander v3
 
-## LunarLander v3
+## Discrete mode: observations and actions
 
-The project uses Gymnasium's installed `LunarLander-v3` environment. Its implementation stays inside the installed Gymnasium package; `.venv/` is the local Python environment and is ignored by Git.
+The agent receives 8 values from the environment at each step:
 
-### Setup
+| # | Observation | What it means |
+|---|---|---|
+| 1 | Horizontal position | Where the lander is from left to right |
+| 2 | Vertical position | How high the lander is above the ground |
+| 3 | Horizontal speed | How fast the lander moves left or right |
+| 4 | Vertical speed | How fast the lander moves up or down |
+| 5 | Angle | How much the lander is tilted |
+| 6 | Rotation speed | How fast the lander is turning |
+| 7 | Left leg contact | Whether the left leg touches the ground (0 or 1) |
+| 8 | Right leg contact | Whether the right leg touches the ground (0 or 1) |
 
-Python 3.12 is recommended for the Box2D dependency.
+In discrete mode, the agent chooses one of 4 actions at each step:
 
-```bash
-python3.12 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-```
+| Action | What it does |
+|---|---|
+| 0 | Do nothing |
+| 1 | Fire the left side engine |
+| 2 | Fire the main engine |
+| 3 | Fire the right side engine |
 
-### Watch a random agent
-
-```bash
-python watch_lunar_lander.py
-```
-
-This opens the human-rendered environment and samples random actions so you can see the lander and controls in motion. Close the window to stop.
+See [compare_actions.md](compare_actions.md) for the side-by-side manual action experiment.
