@@ -1,27 +1,22 @@
-# LunarLander v3
+# LunarLander Reinforcement Learning
 
-## Discrete mode: observations and actions
+This is a learning project about neural networks and reinforcement learning. We are using Gymnasium's `LunarLander-v3` environment and building understanding step by step instead of treating an agent as a finished solution.
 
-The agent receives 8 values from the environment at each step:
+## Project plan
 
-| # | Observation | What it means |
-|---|---|---|
-| 1 | Horizontal position | Where the lander is from left to right |
-| 2 | Vertical position | How high the lander is above the ground |
-| 3 | Horizontal speed | How fast the lander moves left or right |
-| 4 | Vertical speed | How fast the lander moves up or down |
-| 5 | Angle | How much the lander is tilted |
-| 6 | Rotation speed | How fast the lander is turning |
-| 7 | Left leg contact | Whether the left leg touches the ground (0 or 1) |
-| 8 | Right leg contact | Whether the right leg touches the ground (0 or 1) |
+1. Explore the environment, its observations, actions, and rewards.
+2. Train an agent in discrete mode, where it chooses among four actions.
+3. Measure how often it lands safely across many different seeds.
+4. Later, explore continuous mode, where the agent controls engine strength.
 
-In discrete mode, the agent chooses one of 4 actions at each step:
+The first experiment compares doing nothing with manually controlled actions. It helps us see how actions affect the lander's movement, but it is not a trained agent. See [compare_actions.md](compare_actions.md).
 
-| Action | What it does |
-|---|---|
-| 0 | Do nothing |
-| 1 | Fire the left side engine |
-| 2 | Fire the main engine |
-| 3 | Fire the right side engine |
+## Reward idea
 
-See [compare_actions.md](compare_actions.md) for the side-by-side manual action experiment.
+The environment already provides a reward. Our early idea is to understand that reward first, then consider whether to adjust it to encourage a safe, upright, slower landing and discourage unnecessary engine use or long episodes. Any changes will be experiments to evaluate, not assumptions that the agent must follow.
+
+## Current status
+
+- Gymnasium's LunarLander-v3 is installed in the local `.venv/` environment.
+- The side-by-side manual comparison demo is in `compare_actions.py`.
+- No neural network or training algorithm has been added yet.
