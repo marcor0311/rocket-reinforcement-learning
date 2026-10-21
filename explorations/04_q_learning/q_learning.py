@@ -59,7 +59,7 @@ def main() -> None:
     total_score = 0.0
     step = 0
     last_reward: float | None = None
-    last_update = "Take one step. Watch the chosen action’s value change."
+    last_update = "Take one step. Watch the chosen action's value change."
     last_action = "None"
     ended = False
     running = True
@@ -101,7 +101,7 @@ def main() -> None:
                         best_next = 0.0 if terminal else float(np.max(next_values))
                         new_value = update_q_value(old_value, float(reward), best_next, terminal)
                         values[action] = new_value
-                        last_update = f"{ACTIONS[action]} value: {old_value:+.2f}  →  {new_value:+.2f}"
+                        last_update = f"{ACTIONS[action]} value: {old_value:+.2f}  ->  {new_value:+.2f}"
                         last_action = ACTIONS[action]
                         last_reward = float(reward)
                         total_score += float(reward)
