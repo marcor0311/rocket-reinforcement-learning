@@ -21,5 +21,6 @@ The environment already provides a reward. We will use it as our baseline and on
 - Exploration 1: manual action comparison in `explorations/01_actions/`.
 - Exploration 2: default reward notes and live simulation in `explorations/02_reward/`.
 - Exploration 3: a small deterministic Q-table example in `explorations/03_q_table/`.
-- Exploration 4: an interactive Q-learning sandbox in `explorations/04_q_learning/`.
-- No neural network or training algorithm has been added yet.
+- Exploration 4: manually control LunarLander while the Q-table learns from real rewards in `explorations/04_q_learning/`.
+- Exploration 5: let an epsilon-greedy agent use the Q-table to choose actions in `explorations/05_q_learning_agent/`.
+- No neural network has been added yet; the Q-learning explorations use a small table.
